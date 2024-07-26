@@ -33,3 +33,12 @@ describe('GET /headers', () => {
             });
     });
 });
+
+describe('GET /server-error', () => {
+    it('should respond with 500 status', (done) => {
+        request(app)
+            .get('/server-error')
+            .expect(500)
+            .end(done);
+    });
+});
