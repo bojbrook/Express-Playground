@@ -15,4 +15,10 @@ app.get('/headers', (req, res) => {
     res.json(headers);
 });
 
+app.get('/server-error', (req, res) => {
+    res.status(500).send('Server error!');
+});
+
+
+
 module.exports = app;
